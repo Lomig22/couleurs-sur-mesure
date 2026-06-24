@@ -1,0 +1,1173 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Couleurs sur mesure — Peintre en bâtiment · Centre Bretagne (22/56/29)</title>
+  <meta name="description" content="Couleurs sur mesure, peintre en bâtiment à Glomel en Centre Bretagne. Peinture intérieure et extérieure, ravalement de façade, vitrification de parquet, pose de papier peint. Devis gratuit dans les Côtes d'Armor, le Morbihan et le Finistère." />
+  <meta name="theme-color" content="#F5C518" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Couleurs sur mesure — Peintre en bâtiment · Centre Bretagne" />
+  <meta property="og:description" content="Peinture intérieure et extérieure, ravalement de façade, papier peint. Devis gratuit dans tout le Centre Bretagne." />
+  <meta property="og:locale" content="fr_FR" />
+
+  <style>
+    /* ===== IMPORT POLICE ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+    /* ===== TOKENS / VARIABLES ===== */
+    :root {
+      /* Palette */
+      --blanc:   #FFFFFF;
+      --jaune:   #F5C518;
+      --magenta: #E91E8C;
+      --cobalt:  #1A56DB;
+      --gris:    #F4F4F4;
+      --encre:   #1A1A1A;
+      --ardoise: #6B7280;
+
+      /* Typo */
+      --font: 'Nunito', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+
+      /* Layout */
+      --bandeau-h: 36px;
+      --header-h: 68px;
+      --maxw: 1180px;
+      --radius-card: 12px;
+      --radius-pill: 24px;
+
+      /* Ombres */
+      --shadow-sm: 0 2px 8px rgba(26, 26, 26, 0.06);
+      --shadow-md: 0 10px 30px rgba(26, 26, 26, 0.10);
+
+      /* Transitions */
+      --t-fast: 0.2s ease;
+      --t-reveal: 0.5s ease-out;
+    }
+
+    /* ===== RESET ===== */
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--font);
+      font-weight: 400;
+      color: var(--encre);
+      background: var(--blanc);
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button { font-family: inherit; cursor: pointer; border: none; background: none; }
+    ul { list-style: none; }
+
+    :focus-visible {
+      outline: 3px solid var(--cobalt);
+      outline-offset: 2px;
+      border-radius: 4px;
+    }
+
+    /* ===== UTILITAIRES ===== */
+    .container {
+      width: 100%;
+      max-width: var(--maxw);
+      margin: 0 auto;
+      padding: 0 24px;
+    }
+
+    .section {
+      padding: 88px 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .eyebrow {
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      margin-bottom: 14px;
+      display: block;
+    }
+    .eyebrow--magenta { color: var(--magenta); }
+    .eyebrow--cobalt  { color: var(--cobalt); }
+    .eyebrow--jaune   { color: var(--jaune); }
+
+    .section-title {
+      font-weight: 800;
+      font-size: clamp(1.7rem, 4vw, 2.6rem);
+      line-height: 1.15;
+      color: var(--encre);
+      margin-bottom: 16px;
+      letter-spacing: -0.01em;
+    }
+
+    .section-subtitle {
+      color: var(--ardoise);
+      font-size: 1.05rem;
+      max-width: 560px;
+      margin-bottom: 8px;
+    }
+
+    /* Boutons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 14px 32px;
+      border-radius: var(--radius-pill);
+      font-weight: 700;
+      font-size: 0.98rem;
+      transition: transform var(--t-fast), box-shadow var(--t-fast), filter var(--t-fast);
+      line-height: 1.2;
+    }
+    .btn:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+    .btn:active { transform: translateY(0); }
+    .btn--magenta { background: var(--magenta); color: var(--blanc); }
+    .btn--cobalt  { background: var(--cobalt);  color: var(--blanc); }
+    .btn--jaune   { background: var(--jaune);   color: var(--encre); font-weight: 800; }
+
+    /* Touches de peinture SVG (fond des sections grises) */
+    .has-strokes {
+      background-color: var(--gris);
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='300' height='200' viewBox='0 0 300 200'%3E%3Cpath d='M18 44 C60 30 120 38 175 32 C215 28 255 40 282 36 C258 52 210 50 168 54 C118 59 58 56 18 44 Z' fill='%23F5C518' opacity='0.05'/%3E%3Cpath d='M36 128 C90 112 150 124 205 116 C238 111 268 122 290 118 C262 138 208 134 158 140 C104 146 64 142 36 128 Z' fill='%23E91E8C' opacity='0.045'/%3E%3Cpath d='M10 168 C48 158 92 166 140 160 C176 156 210 165 236 162 C204 180 150 178 104 182 C66 185 32 180 10 168 Z' fill='%231A56DB' opacity='0.05'/%3E%3Cpath d='M150 14 C180 8 220 14 252 10 C228 24 190 22 150 26 C128 28 110 24 96 18 C116 14 134 16 150 14 Z' fill='%23E91E8C' opacity='0.04'/%3E%3C/svg%3E");
+      background-repeat: repeat;
+      background-size: 300px 200px;
+    }
+
+    /* ===== REVEAL (scroll) ===== */
+    .reveal {
+      opacity: 0;
+      transform: translateY(14px);
+      transition: opacity var(--t-reveal), transform var(--t-reveal);
+    }
+    .reveal.revealed {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ===== BANDEAU ===== */
+    .bandeau {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      height: var(--bandeau-h);
+      background: var(--jaune);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .bandeau a {
+      color: var(--encre);
+      font-weight: 700;
+      font-size: 13px;
+      text-align: center;
+      padding: 0 14px;
+      white-space: nowrap;
+    }
+
+    /* ===== HEADER ===== */
+    .header {
+      position: fixed;
+      top: var(--bandeau-h);
+      left: 0;
+      right: 0;
+      z-index: 999;
+      height: var(--header-h);
+      background: rgba(255, 255, 255, 0);
+      transition: background var(--t-fast), box-shadow var(--t-fast), backdrop-filter var(--t-fast);
+    }
+    .header.scrolled {
+      background: rgba(255, 255, 255, 0.97);
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+      box-shadow: var(--shadow-sm);
+    }
+    .header .container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    /* Logo */
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .logo__mark { flex-shrink: 0; }
+    .logo__text {
+      display: flex;
+      align-items: baseline;
+      gap: 6px;
+      flex-wrap: wrap;
+      line-height: 1;
+    }
+    .logo__name1 { font-weight: 800; color: var(--encre); font-size: 1.2rem; }
+    .logo__name2 { font-weight: 600; color: var(--magenta); font-size: 1.2rem; }
+    .logo__tag   { font-weight: 400; color: var(--ardoise); font-size: 12px; }
+
+    /* Nav desktop */
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+    }
+    .nav__links {
+      display: flex;
+      gap: 26px;
+    }
+    .nav__links a {
+      font-weight: 600;
+      font-size: 13px;
+      color: var(--ardoise);
+      transition: color var(--t-fast);
+    }
+    .nav__links a:hover,
+    .nav__links a.active { color: var(--magenta); }
+
+    .header__cta {
+      padding: 9px 18px;
+      border-radius: 20px;
+      background: var(--magenta);
+      color: var(--blanc);
+      font-weight: 700;
+      font-size: 13px;
+      transition: transform var(--t-fast), box-shadow var(--t-fast);
+    }
+    .header__cta:hover { transform: translateY(-2px); box-shadow: var(--shadow-md); }
+
+    /* Hamburger */
+    .burger {
+      display: none;
+      flex-direction: column;
+      justify-content: center;
+      gap: 5px;
+      width: 40px;
+      height: 40px;
+    }
+    .burger span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: var(--encre);
+      border-radius: 2px;
+      transition: transform var(--t-fast), opacity var(--t-fast);
+      margin: 0 auto;
+    }
+    .burger.open span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .burger.open span:nth-child(2) { opacity: 0; }
+    .burger.open span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+    /* Overlay mobile */
+    .mobile-menu {
+      position: fixed;
+      inset: 0;
+      z-index: 998;
+      background: var(--blanc);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 28px;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity var(--t-fast), visibility var(--t-fast);
+    }
+    .mobile-menu.open { opacity: 1; visibility: visible; }
+    .mobile-menu a {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: var(--encre);
+    }
+    .mobile-menu a:hover { color: var(--magenta); }
+    .mobile-menu .btn { margin-top: 10px; }
+
+    /* ===== HERO ===== */
+    .hero {
+      padding-top: calc(var(--bandeau-h) + var(--header-h) + 64px);
+      padding-bottom: 88px;
+      position: relative;
+      background: var(--blanc);
+      overflow: hidden;
+    }
+    /* touches subtiles en bas du hero */
+    .hero__strokes {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -20px;
+      height: 240px;
+      pointer-events: none;
+      z-index: 0;
+    }
+    .hero .container { position: relative; z-index: 1; }
+
+    .hero__eyebrow {
+      font-weight: 700;
+      font-size: 13px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--cobalt);
+      margin-bottom: 20px;
+      display: block;
+    }
+    .hero h1 {
+      font-weight: 800;
+      font-size: clamp(2.6rem, 7vw, 4.6rem);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 22px;
+    }
+    .hero h1 .accent { color: var(--magenta); display: block; }
+    .hero__sub {
+      color: var(--ardoise);
+      font-size: 1.12rem;
+      max-width: 480px;
+      margin-bottom: 32px;
+    }
+    .hero__ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+      margin-bottom: 36px;
+    }
+    .hero__badges {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .badge {
+      background: var(--gris);
+      color: var(--ardoise);
+      font-weight: 600;
+      font-size: 0.88rem;
+      padding: 8px 18px;
+      border-radius: 20px;
+    }
+
+    /* ===== PRESTATIONS ===== */
+    .prestations__grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 44px;
+    }
+    .card {
+      background: var(--blanc);
+      border-radius: var(--radius-card);
+      border-top: 4px solid var(--magenta);
+      padding: 30px 28px;
+      box-shadow: var(--shadow-sm);
+      transition: transform var(--t-fast), box-shadow var(--t-fast);
+    }
+    .card:hover { transform: translateY(-3px); box-shadow: var(--shadow-md); }
+    .card--magenta { border-top-color: var(--magenta); }
+    .card--cobalt  { border-top-color: var(--cobalt); }
+    .card--jaune   { border-top-color: var(--jaune); }
+    .card__icon {
+      width: 44px;
+      height: 44px;
+      margin-bottom: 18px;
+      color: var(--encre);
+    }
+    .card__icon svg { width: 100%; height: 100%; }
+    .card h3 {
+      font-weight: 700;
+      font-size: 1.25rem;
+      margin-bottom: 10px;
+      color: var(--encre);
+    }
+    .card p { color: var(--ardoise); font-size: 0.98rem; }
+
+    /* ===== AVANT / APRÈS ===== */
+    .ba__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 44px;
+    }
+    .ba__item { }
+    .ba__pair {
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      gap: 8px;
+    }
+    .ba__ph {
+      position: relative;
+      aspect-ratio: 4 / 3;
+      border-radius: 10px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-start;
+      justify-content: flex-start;
+    }
+    .ba__ph--avant { background: var(--gris); }
+    .ba__ph--apres { background: linear-gradient(135deg, rgba(233,30,140,0.10), rgba(245,197,24,0.10)); }
+    .ba__label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      font-weight: 700;
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      background: rgba(255,255,255,0.7);
+    }
+    .ba__label--avant { color: var(--ardoise); }
+    .ba__label--apres { color: var(--magenta); }
+    .ba__ph-icon {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: var(--ardoise);
+      opacity: 0.4;
+    }
+    .ba__ph--apres .ba__ph-icon { color: var(--magenta); opacity: 0.45; }
+    .ba__arrow {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--magenta);
+      text-align: center;
+    }
+    .ba__caption {
+      margin-top: 12px;
+      color: var(--ardoise);
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .ba__cta {
+      text-align: center;
+      margin-top: 48px;
+    }
+    .ba__cta a {
+      font-weight: 700;
+      color: var(--magenta);
+      font-size: 1.05rem;
+      transition: opacity var(--t-fast);
+    }
+    .ba__cta a:hover { opacity: 0.75; }
+
+    /* ===== PROCESSUS ===== */
+    .process__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 28px;
+      margin-top: 44px;
+    }
+    .step {
+      background: var(--blanc);
+      border-radius: var(--radius-card);
+      padding: 32px 28px;
+      box-shadow: var(--shadow-sm);
+      position: relative;
+    }
+    .step__num {
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 1.15rem;
+      color: var(--blanc);
+      margin-bottom: 18px;
+    }
+    .step:nth-child(1) .step__num { background: var(--jaune); color: var(--encre); }
+    .step:nth-child(2) .step__num { background: var(--magenta); }
+    .step:nth-child(3) .step__num { background: var(--cobalt); }
+    .step h3 { font-weight: 700; font-size: 1.2rem; margin-bottom: 10px; }
+    .step p { color: var(--ardoise); font-size: 0.98rem; }
+
+    /* ===== À PROPOS ===== */
+    .about__text p {
+      color: var(--ardoise);
+      line-height: 1.8;
+      max-width: 720px;
+      margin-bottom: 18px;
+      font-size: 1.05rem;
+    }
+    .about__values {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px 18px;
+      margin-top: 26px;
+      align-items: center;
+    }
+    .about__values span {
+      font-weight: 700;
+      color: var(--encre);
+      font-size: 1.05rem;
+    }
+    .about__values .sep { color: var(--magenta); font-weight: 800; }
+
+    /* ===== TÉMOIGNAGES ===== */
+    .reviews__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 44px;
+    }
+    .review {
+      background: var(--blanc);
+      border-radius: var(--radius-card);
+      border-left: 4px solid var(--magenta);
+      padding: 28px 26px;
+      box-shadow: var(--shadow-sm);
+      display: flex;
+      flex-direction: column;
+    }
+    .review--magenta { border-left-color: var(--magenta); }
+    .review--cobalt  { border-left-color: var(--cobalt); }
+    .review--jaune   { border-left-color: var(--jaune); }
+    .review__text {
+      color: var(--encre);
+      font-size: 1rem;
+      margin-bottom: 18px;
+      flex: 1;
+    }
+    .review__author {
+      font-weight: 700;
+      color: var(--encre);
+      font-size: 0.95rem;
+    }
+    .review__stars { color: var(--jaune); letter-spacing: 2px; margin-top: 4px; }
+
+    /* ===== CONTACT ===== */
+    .contact {
+      background: var(--encre);
+      color: var(--blanc);
+    }
+    .contact .section-title { color: var(--blanc); }
+    .contact .section-subtitle { color: var(--ardoise); }
+    .contact__grid {
+      display: grid;
+      grid-template-columns: 1fr 1.2fr;
+      gap: 32px;
+      margin-top: 44px;
+      align-items: start;
+    }
+    .contact__left {
+      background: rgba(245, 197, 24, 0.06);
+      border: 1px solid rgba(245, 197, 24, 0.2);
+      border-radius: var(--radius-card);
+      padding: 28px;
+    }
+    .contact__left .btn { width: 100%; margin-bottom: 14px; }
+    .contact__loc {
+      color: var(--ardoise);
+      font-weight: 600;
+      font-size: 0.95rem;
+      margin-top: 8px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    /* Formulaire */
+    .form {
+      display: grid;
+      gap: 16px;
+    }
+    .form label {
+      display: block;
+      font-weight: 600;
+      font-size: 13px;
+      margin-bottom: 6px;
+      color: var(--blanc);
+    }
+    .form input,
+    .form select,
+    .form textarea {
+      width: 100%;
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      border-radius: 8px;
+      background: transparent;
+      padding: 11px 14px;
+      color: var(--blanc);
+      font-family: var(--font);
+      font-size: 0.98rem;
+      transition: border-color var(--t-fast);
+    }
+    .form input::placeholder,
+    .form textarea::placeholder { color: var(--ardoise); }
+    .form select { color: var(--blanc); }
+    .form select option { color: var(--encre); }
+    .form input:focus,
+    .form select:focus,
+    .form textarea:focus {
+      outline: none;
+      border-color: var(--jaune);
+    }
+    .form textarea { resize: vertical; min-height: 110px; }
+    .form .btn { width: 100%; margin-top: 4px; }
+    .form__row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    /* ===== FOOTER ===== */
+    .footer {
+      background: var(--gris);
+      border-top: 3px solid var(--magenta);
+      text-align: center;
+      padding: 48px 0 36px;
+    }
+    .footer__logo {
+      font-weight: 800;
+      font-size: 1.4rem;
+      color: var(--encre);
+      margin-bottom: 8px;
+    }
+    .footer p { color: var(--ardoise); font-size: 0.95rem; margin-bottom: 6px; }
+    .footer__phone { font-weight: 700; color: var(--magenta); }
+    .footer__mail  { color: var(--cobalt); }
+    .footer__insta { color: var(--magenta); font-weight: 700; }
+    .footer__links {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 8px 18px;
+      margin: 16px 0;
+    }
+    .footer__copy { font-size: 0.85rem; margin-top: 16px; }
+    .footer__by { font-size: 0.75rem; color: var(--ardoise); margin-top: 4px; }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 1024px) {
+      .contact__grid { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width: 768px) {
+      .section { padding: 64px 0; }
+      .nav { display: none; }
+      .burger { display: flex; }
+      .prestations__grid { grid-template-columns: 1fr; }
+      .ba__grid { grid-template-columns: 1fr; }
+      .process__grid { grid-template-columns: 1fr; }
+      .reviews__grid { grid-template-columns: 1fr; }
+      .logo__tag { display: none; }
+    }
+
+    @media (max-width: 480px) {
+      .container { padding: 0 18px; }
+      .bandeau a { font-size: 11px; padding: 0 8px; }
+      .hero__ctas .btn { width: 100%; }
+      .form__row { grid-template-columns: 1fr; }
+    }
+
+    /* ===== REDUCED MOTION ===== */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      .reveal { opacity: 1; transform: none; transition: none; }
+      *, *::before, *::after {
+        animation-duration: 0.001ms;
+        transition-duration: 0.001ms;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ===== BANDEAU ===== -->
+  <div class="bandeau">
+    <a href="tel:0785324081" aria-label="Devis gratuit — appeler le 07 85 32 40 81">
+      🎨 Devis gratuit · 07 85 32 40 81 · Centre Bretagne (22/56/29)
+    </a>
+  </div>
+
+  <!-- ===== HEADER ===== -->
+  <header class="header" id="header">
+    <div class="container">
+      <a href="#hero" class="logo" aria-label="Couleurs sur mesure — accueil">
+        <span class="logo__mark" aria-hidden="true">
+          <!-- Pinceau avec flamme tricolore -->
+          <svg width="34" height="34" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <!-- Manche -->
+            <rect x="22" y="26" width="4" height="18" rx="2" fill="#1A1A1A"/>
+            <!-- Virole -->
+            <rect x="18.5" y="22" width="11" height="6" rx="1.5" fill="#6B7280"/>
+            <!-- Flamme / poils tricolores -->
+            <path d="M24 4 C20 9 18 13 19 18 C20 22 24 23 24 23 C24 23 28 22 29 18 C30 13 28 9 24 4 Z" fill="#F5C518"/>
+            <path d="M24 8 C21.5 12 20.5 15 21.5 19 C22.5 22 24 22.5 24 22.5 C24 22.5 25.5 22 26.5 19 C27.5 15 26.5 12 24 8 Z" fill="#E91E8C"/>
+            <path d="M24 12 C22.5 15 22 17 23 20 C23.6 21.8 24 22 24 22 C24 22 24.4 21.8 25 20 C26 17 25.5 15 24 12 Z" fill="#1A56DB"/>
+          </svg>
+        </span>
+        <span class="logo__text">
+          <span class="logo__name1">Couleurs</span>
+          <span class="logo__name2">sur mesure</span>
+          <span class="logo__tag">Peinture</span>
+        </span>
+      </a>
+
+      <nav class="nav" aria-label="Navigation principale">
+        <ul class="nav__links">
+          <li><a href="#prestations">Prestations</a></li>
+          <li><a href="#avant-apres">Avant/Après</a></li>
+          <li><a href="#apropos">À propos</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <a href="tel:0785324081" class="header__cta" aria-label="Devis gratuit — appeler">📞 Devis gratuit</a>
+      </nav>
+
+      <button class="burger" id="burger" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== MENU MOBILE ===== -->
+  <nav class="mobile-menu" id="mobile-menu" aria-label="Navigation mobile">
+    <a href="#prestations" class="m-link">Prestations</a>
+    <a href="#avant-apres" class="m-link">Avant/Après</a>
+    <a href="#apropos" class="m-link">À propos</a>
+    <a href="#contact" class="m-link">Contact</a>
+    <a href="tel:0785324081" class="btn btn--magenta" aria-label="Devis gratuit — appeler">📞 Devis gratuit</a>
+  </nav>
+
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="hero">
+    <svg class="hero__strokes" viewBox="0 0 1200 240" preserveAspectRatio="none" aria-hidden="true">
+      <path d="M-20 150 C200 120 400 160 620 138 C820 118 1020 152 1220 130 C1020 178 820 168 620 184 C400 200 180 188 -20 150 Z" fill="#F5C518" opacity="0.06"/>
+      <path d="M-20 200 C220 178 460 204 700 186 C900 172 1080 198 1220 180 C1040 226 820 216 600 224 C360 232 160 224 -20 200 Z" fill="#E91E8C" opacity="0.05"/>
+      <path d="M40 110 C260 96 420 116 600 104 C760 94 900 112 1020 102 C880 128 700 124 540 130 C340 138 200 130 40 110 Z" fill="#1A56DB" opacity="0.05"/>
+    </svg>
+    <div class="container">
+      <span class="hero__eyebrow reveal">Peintre en bâtiment · Centre Bretagne · 22/56/29</span>
+      <h1 class="reveal">
+        La couleur,
+        <span class="accent">sur mesure.</span>
+      </h1>
+      <p class="hero__sub reveal">
+        Peinture intérieure et extérieure, ravalement de façade, papier peint.
+        Devis gratuit dans tout le Centre Bretagne.
+      </p>
+      <div class="hero__ctas reveal">
+        <a href="tel:0785324081" class="btn btn--magenta" aria-label="Demander un devis gratuit par téléphone">📞 Demander un devis gratuit</a>
+        <a href="mailto:couleurssurmesure@gmail.com" class="btn btn--cobalt" aria-label="Envoyer un email">✉️ Envoyer un email</a>
+      </div>
+      <div class="hero__badges reveal">
+        <span class="badge">🎨 Intérieur &amp; Extérieur</span>
+        <span class="badge">✓ Devis gratuit</span>
+        <span class="badge">📍 Centre Bretagne</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PRESTATIONS ===== -->
+  <section class="section has-strokes" id="prestations">
+    <div class="container">
+      <span class="eyebrow eyebrow--magenta reveal">Nos prestations</span>
+      <h2 class="section-title reveal">Tout pour sublimer vos murs.</h2>
+
+      <div class="prestations__grid">
+        <!-- Card 1 -->
+        <article class="card card--magenta reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M30 6 L42 18 L24 36 L12 24 Z"/>
+              <path d="M12 24 L8 38 L20 34"/>
+              <path d="M8 38 L6 44"/>
+            </svg>
+          </div>
+          <h3>🎨 Peinture intérieure</h3>
+          <p>Murs, plafonds, boiseries. Préparation soignée des supports, application nette. Résultat impeccable, logement respecté.</p>
+        </article>
+
+        <!-- Card 2 -->
+        <article class="card card--cobalt reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M6 22 L24 6 L42 22"/>
+              <path d="M10 20 V42 H38 V20"/>
+              <path d="M20 42 V30 H28 V42"/>
+            </svg>
+          </div>
+          <h3>🏠 Ravalement de façade</h3>
+          <p>Nettoyage, réparation des fissures, application de peinture ou enduit. Votre façade retrouve un aspect neuf.</p>
+        </article>
+
+        <!-- Card 3 -->
+        <article class="card card--jaune reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="6" y="14" width="36" height="20" rx="2"/>
+              <path d="M14 14 V34 M22 14 V34 M30 14 V34 M38 14 V34"/>
+            </svg>
+          </div>
+          <h3>🪵 Vitrification de parquet</h3>
+          <p>Ponçage, vitrification ou huilage. Votre parquet retrouve son éclat et sa protection pour de nombreuses années.</p>
+        </article>
+
+        <!-- Card 4 -->
+        <article class="card card--magenta reveal">
+          <div class="card__icon" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <rect x="8" y="6" width="32" height="36" rx="2"/>
+              <path d="M8 18 H40 M8 30 H40 M20 6 V42 M30 6 V42"/>
+            </svg>
+          </div>
+          <h3>🖼️ Pose de papier peint</h3>
+          <p>Papier peint classique, vinyle, intissé. Découpe précise et pose soignée, avec raccords parfaits.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== AVANT / APRÈS ===== -->
+  <section class="section" id="avant-apres">
+    <div class="container">
+      <span class="eyebrow eyebrow--cobalt reveal">Avant / Après</span>
+      <h2 class="section-title reveal">Le travail parle de lui-même.</h2>
+      <p class="section-subtitle reveal">Chaque chantier est documenté — retrouvez nos réalisations sur Instagram.</p>
+
+      <div class="ba__grid">
+        <!-- Paire 1 -->
+        <article class="ba__item reveal">
+          <div class="ba__pair">
+            <div class="ba__ph ba__ph--avant">
+              <span class="ba__label ba__label--avant">Avant</span>
+              <span class="ba__ph-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              </span>
+            </div>
+            <span class="ba__arrow" aria-hidden="true">→</span>
+            <div class="ba__ph ba__ph--apres">
+              <span class="ba__label ba__label--apres">Après</span>
+              <span class="ba__ph-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              </span>
+            </div>
+          </div>
+          <p class="ba__caption">Chambre — peinture intérieure</p>
+        </article>
+
+        <!-- Paire 2 -->
+        <article class="ba__item reveal">
+          <div class="ba__pair">
+            <div class="ba__ph ba__ph--avant">
+              <span class="ba__label ba__label--avant">Avant</span>
+              <span class="ba__ph-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              </span>
+            </div>
+            <span class="ba__arrow" aria-hidden="true">→</span>
+            <div class="ba__ph ba__ph--apres">
+              <span class="ba__label ba__label--apres">Après</span>
+              <span class="ba__ph-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              </span>
+            </div>
+          </div>
+          <p class="ba__caption">Façade — ravalement</p>
+        </article>
+
+        <!-- Paire 3 -->
+        <article class="ba__item reveal">
+          <div class="ba__pair">
+            <div class="ba__ph ba__ph--avant">
+              <span class="ba__label ba__label--avant">Avant</span>
+              <span class="ba__ph-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              </span>
+            </div>
+            <span class="ba__arrow" aria-hidden="true">→</span>
+            <div class="ba__ph ba__ph--apres">
+              <span class="ba__label ba__label--apres">Après</span>
+              <span class="ba__ph-icon" aria-hidden="true">
+                <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="9" cy="9" r="2"/><path d="M21 15l-5-5L5 21"/></svg>
+              </span>
+            </div>
+          </div>
+          <p class="ba__caption">Couloir — papier peint</p>
+        </article>
+      </div>
+
+      <div class="ba__cta reveal">
+        <a href="https://www.instagram.com/couleurs.sur.mesure" target="_blank" rel="noopener noreferrer" aria-label="Voir plus sur Instagram (nouvel onglet)">
+          Voir plus sur Instagram @couleurs.sur.mesure →
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== PROCESSUS ===== -->
+  <section class="section has-strokes" id="processus">
+    <div class="container">
+      <span class="eyebrow eyebrow--magenta reveal">Comment ça marche</span>
+      <h2 class="section-title reveal">Simple, du premier appel au dernier coup de pinceau.</h2>
+
+      <div class="process__grid">
+        <article class="step reveal">
+          <div class="step__num" aria-hidden="true">1</div>
+          <h3>Vous appelez</h3>
+          <p>Un coup de fil au 07 85 32 40 81 ou un email. On définit ensemble votre projet et vos envies.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__num" aria-hidden="true">2</div>
+          <h3>Devis gratuit</h3>
+          <p>Déplacement sur place, estimation précise. Devis clair et détaillé, sans engagement.</p>
+        </article>
+        <article class="step reveal">
+          <div class="step__num" aria-hidden="true">3</div>
+          <h3>On s'en occupe</h3>
+          <p>Chantier soigné, protection du mobilier, nettoyage en fin de travaux. Vous n'avez plus qu'à profiter.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== À PROPOS ===== -->
+  <section class="section" id="apropos">
+    <div class="container">
+      <span class="eyebrow eyebrow--cobalt reveal">Qui sommes-nous</span>
+      <h2 class="section-title reveal">Artisans peintres en Centre Bretagne.</h2>
+      <div class="about__text">
+        <p class="reveal">
+          Couleurs sur mesure, c'est une entreprise de peinture en bâtiment basée à
+          Glomel, au cœur de la Bretagne. Nous intervenons dans les Côtes d'Armor,
+          le Morbihan et le Finistère pour tous vos travaux de peinture intérieure
+          et extérieure.
+        </p>
+        <p class="reveal">
+          Que ce soit pour une chambre à rafraîchir, une façade à ravaler ou un
+          parquet à vitrifier, nous apportons le même soin à chaque chantier.
+        </p>
+      </div>
+      <div class="about__values reveal">
+        <span>Devis gratuit</span>
+        <span class="sep">·</span>
+        <span>Travail soigné</span>
+        <span class="sep">·</span>
+        <span>Centre Bretagne</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== TÉMOIGNAGES ===== -->
+  <section class="section has-strokes" id="avis">
+    <div class="container">
+      <span class="eyebrow eyebrow--magenta reveal">Avis clients</span>
+      <h2 class="section-title reveal">Ce qu'ils en pensent.</h2>
+
+      <div class="reviews__grid">
+        <article class="review review--magenta reveal">
+          <p class="review__text">« Travail très soigné, ponctuel et propre. Notre salon est méconnaissable, on est ravis du résultat. Je recommande sans hésiter. »</p>
+          <div class="review__author">— Marie-Anne L., Rostrenen</div>
+          <div class="review__stars" aria-label="Note 5 sur 5">★★★★★</div>
+        </article>
+        <article class="review review--cobalt reveal">
+          <p class="review__text">« Ravalement de façade bien réalisé, rendu impeccable. Devis clair, prix honnête. Bonne communication du début à la fin. »</p>
+          <div class="review__author">— Yannick B., Carhaix</div>
+          <div class="review__stars" aria-label="Note 5 sur 5">★★★★★</div>
+        </article>
+        <article class="review review--jaune reveal">
+          <p class="review__text">« Papier peint posé avec soin, raccords parfaits. Très professionnel et agréable. N'hésitez pas à les appeler. »</p>
+          <div class="review__author">— Nathalie R., Pontivy</div>
+          <div class="review__stars" aria-label="Note 5 sur 5">★★★★★</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <span class="eyebrow eyebrow--jaune reveal">Contact</span>
+      <h2 class="section-title reveal">Parlons de votre projet.</h2>
+      <p class="section-subtitle reveal">Devis gratuit · Centre Bretagne</p>
+
+      <div class="contact__grid">
+        <!-- Bloc gauche -->
+        <div class="contact__left reveal">
+          <a href="tel:0785324081" class="btn btn--jaune" aria-label="Appeler le 07 85 32 40 81">📞 07 85 32 40 81</a>
+          <a href="mailto:couleurssurmesure@gmail.com" class="btn btn--magenta" aria-label="Envoyer un email à couleurssurmesure@gmail.com">✉️ couleurssurmesure@gmail.com</a>
+          <p class="contact__loc">📍 Glomel · Centre Bretagne (22/56/29)</p>
+        </div>
+
+        <!-- Bloc droit : formulaire -->
+        <form class="form reveal" action="#" method="post" aria-label="Formulaire de demande de devis">
+          <div class="form__row">
+            <div>
+              <label for="f-nom">Prénom &amp; Nom</label>
+              <input type="text" id="f-nom" name="nom" placeholder="Votre nom" autocomplete="name" required />
+            </div>
+            <div>
+              <label for="f-tel">Téléphone</label>
+              <input type="tel" id="f-tel" name="telephone" placeholder="06 00 00 00 00" autocomplete="tel" />
+            </div>
+          </div>
+          <div>
+            <label for="f-email">Email</label>
+            <input type="email" id="f-email" name="email" placeholder="vous@email.com" autocomplete="email" required />
+          </div>
+          <div>
+            <label for="f-type">Type de travaux</label>
+            <select id="f-type" name="type">
+              <option value="">Sélectionnez…</option>
+              <option>Peinture intérieure</option>
+              <option>Ravalement de façade</option>
+              <option>Vitrification de parquet</option>
+              <option>Pose de papier peint</option>
+              <option>Autre</option>
+            </select>
+          </div>
+          <div>
+            <label for="f-desc">Description</label>
+            <textarea id="f-desc" name="description" placeholder="Décrivez votre projet…"></textarea>
+          </div>
+          <button type="submit" class="btn btn--magenta" aria-label="Envoyer ma demande de devis">Envoyer ma demande</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__logo">Couleurs sur mesure</div>
+      <p>Peintre en bâtiment · Centre Bretagne (22/56/29)</p>
+      <div class="footer__links">
+        <a href="tel:0785324081" class="footer__phone" aria-label="Appeler le 07 85 32 40 81">07 85 32 40 81</a>
+        <a href="mailto:couleurssurmesure@gmail.com" class="footer__mail" aria-label="Envoyer un email">couleurssurmesure@gmail.com</a>
+        <a href="https://www.instagram.com/couleurs.sur.mesure" target="_blank" rel="noopener noreferrer" class="footer__insta" aria-label="Instagram (nouvel onglet)">@couleurs.sur.mesure</a>
+      </div>
+      <p class="footer__copy">© 2026 Couleurs sur mesure — Tous droits réservés</p>
+      <p class="footer__by">Site réalisé par Payment Flow</p>
+    </div>
+  </footer>
+
+  <!-- ===== JAVASCRIPT ===== -->
+  <script>
+    'use strict';
+
+    (function () {
+      var header = document.getElementById('header');
+      var burger = document.getElementById('burger');
+      var mobileMenu = document.getElementById('mobile-menu');
+      var prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      /* ===== HEADER SCROLL ===== */
+      function onScroll() {
+        if (window.scrollY > 60) {
+          header.classList.add('scrolled');
+        } else {
+          header.classList.remove('scrolled');
+        }
+      }
+      window.addEventListener('scroll', onScroll, { passive: true });
+      onScroll();
+
+      /* ===== HAMBURGER MOBILE ===== */
+      function closeMenu() {
+        burger.classList.remove('open');
+        mobileMenu.classList.remove('open');
+        burger.setAttribute('aria-expanded', 'false');
+        burger.setAttribute('aria-label', 'Ouvrir le menu');
+        document.body.style.overflow = '';
+      }
+      function toggleMenu() {
+        var willOpen = !mobileMenu.classList.contains('open');
+        burger.classList.toggle('open', willOpen);
+        mobileMenu.classList.toggle('open', willOpen);
+        burger.setAttribute('aria-expanded', willOpen ? 'true' : 'false');
+        burger.setAttribute('aria-label', willOpen ? 'Fermer le menu' : 'Ouvrir le menu');
+        document.body.style.overflow = willOpen ? 'hidden' : '';
+      }
+      burger.addEventListener('click', toggleMenu);
+      Array.prototype.forEach.call(mobileMenu.querySelectorAll('a'), function (link) {
+        link.addEventListener('click', closeMenu);
+      });
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && mobileMenu.classList.contains('open')) {
+          closeMenu();
+        }
+      });
+
+      /* ===== SCROLL REVEAL ===== */
+      var reveals = document.querySelectorAll('.reveal');
+      if (prefersReduced || !('IntersectionObserver' in window)) {
+        Array.prototype.forEach.call(reveals, function (el) {
+          el.classList.add('revealed');
+        });
+      } else {
+        var observer = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var el = entry.target;
+              // stagger entre éléments frères
+              var siblings = Array.prototype.slice.call(
+                el.parentNode.querySelectorAll('.reveal')
+              );
+              var index = siblings.indexOf(el);
+              var delay = index > 0 ? index * 0.08 : 0;
+              el.style.transitionDelay = delay + 's';
+              el.classList.add('revealed');
+              observer.unobserve(el);
+            }
+          });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+
+        Array.prototype.forEach.call(reveals, function (el) {
+          observer.observe(el);
+        });
+      }
+
+      /* ===== SCROLLSPY ===== */
+      var navLinks = Array.prototype.slice.call(
+        document.querySelectorAll('.nav__links a')
+      );
+      var sections = navLinks
+        .map(function (link) {
+          var id = link.getAttribute('href');
+          return id && id.charAt(0) === '#' ? document.querySelector(id) : null;
+        })
+        .filter(Boolean);
+
+      if ('IntersectionObserver' in window && sections.length) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+              var id = '#' + entry.target.id;
+              navLinks.forEach(function (link) {
+                link.classList.toggle('active', link.getAttribute('href') === id);
+              });
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px', threshold: 0 });
+        sections.forEach(function (sec) { spy.observe(sec); });
+      }
+
+      /* ===== FORMULAIRE (placeholder) ===== */
+      var form = document.querySelector('.form');
+      if (form) {
+        form.addEventListener('submit', function (e) {
+          if (form.getAttribute('action') === '#') {
+            e.preventDefault();
+            alert('Merci ! Pour activer l\'envoi, connectez le formulaire à Web3Forms ou Formspree.');
+          }
+        });
+      }
+    })();
+  </script>
+</body>
+</html>
